@@ -15,7 +15,7 @@ theme.confdir       = awful.util.getdir("config") .. "/themes/" .. theme.name
 
 
 -- {{{ Styles
-theme.font      = "Profont 8"
+theme.font      = "neep 7"
 
 -- {{{ Colors
 theme.fg_normal = "#DCDCCC"
@@ -85,6 +85,8 @@ theme.mouse_finder_color = theme.fg_urgent
 -- {{{ Taglist icons
 theme.taglist_squares_sel   = theme.confdir .. "/icons/taglist/sel.png"
 theme.taglist_squares_unsel = theme.confdir .. "/icons/taglist/unsel.png"
+themedir = theme.confdir
+
 --theme.taglist_squares_resize = "false"
 -- }}}
 
@@ -94,36 +96,39 @@ theme.awesome_icon           = theme.confdir .. "/icons/awesome.png"
 --theme.tasklist_floating_icon = "/usr/share/awesome/themes/default/tasklist/floatingw.png"
 -- }}}
 
--- {{{ Layout icons
-theme.layout_tile       = theme.confdir .. "/icons/layouts/tile.png"
-theme.layout_tileleft   = theme.confdir .. "/icons/layouts/tileleft.png"
-theme.layout_tilebottom = theme.confdir .. "/icons/layouts/tilebottom.png"
-theme.layout_tiletop    = theme.confdir .. "/icons/layouts/tiletop.png"
-theme.layout_fairv      = theme.confdir .. "/icons/layouts/fairv.png"
-theme.layout_fairh      = theme.confdir .. "/icons/layouts/fairh.png"
-theme.layout_spiral     = theme.confdir .. "/icons/layouts/spiral.png"
-theme.layout_dwindle    = theme.confdir .. "/icons/layouts/dwindle.png"
-theme.layout_max        = theme.confdir .. "/icons/layouts/max.png"
-theme.layout_fullscreen = theme.confdir .. "/icons/layouts/fullscreen.png"
-theme.layout_magnifier  = theme.confdir .. "/icons/layouts/magnifier.png"
-theme.layout_floating   = theme.confdir .. "/icons/layouts/floating.png"
--- }}}
+theme.layout_tile                   = themes_dir .. "/icons/tile.png"
+theme.layout_tilegaps               = themes_dir .. "/icons/tilegaps.png"
+theme.layout_tileleft               = themes_dir .. "/icons/tileleft.png"
+theme.layout_tilebottom             = themes_dir .. "/icons/tilebottom.png"
+theme.layout_tiletop                = themes_dir .. "/icons/tiletop.png"
+theme.layout_fairv                  = themes_dir .. "/icons/fairv.png"
+theme.layout_fairh                  = themes_dir .. "/icons/fairh.png"
+theme.layout_spiral                 = themes_dir .. "/icons/spiral.png"
+theme.layout_dwindle                = themes_dir .. "/icons/dwindle.png"
+theme.layout_max                    = themes_dir .. "/icons/max.png"
+theme.layout_fullscreen             = themes_dir .. "/icons/fullscreen.png"
+theme.layout_magnifier              = themes_dir .. "/icons/magnifier.png"
+theme.layout_floating               = themes_dir .. "/icons/floating.png"
 
--- {{{ Widget icons
-theme.widget_cpu    = theme.confdir .. "/icons/cpu.png"
-theme.widget_bat    = theme.confdir .. "/icons/bat.png"
-theme.widget_mem    = theme.confdir .. "/icons/mem.png"
-theme.widget_fs     = theme.confdir .. "/icons/disk.png"
-theme.widget_net    = theme.confdir .. "/icons/down.png"
-theme.widget_netup  = theme.confdir .. "/icons/up.png"
-theme.widget_wifi   = theme.confdir .. "/icons/wifi.png"
-theme.widget_mail   = theme.confdir .. "/icons/mail.png"
-theme.widget_vol    = theme.confdir .. "/icons/vol.png"
-theme.widget_org    = theme.confdir .. "/icons/cal.png"
-theme.widget_date   = theme.confdir .. "/icons/time.png"
-theme.widget_crypto = theme.confdir .. "/icons/crypto.png"
-theme.widget_sep    = theme.confdir .. "/icons/separator.png"
--- }}}
+
+theme.widget_ac                     = themes_dir .. "/icons/ac.png"
+theme.widget_battery                = themes_dir .. "/icons/battery.png"
+theme.widget_battery_low            = themes_dir .. "/icons/battery_low.png"
+theme.widget_battery_empty          = themes_dir .. "/icons/battery_empty.png"
+theme.widget_mem                    = themes_dir .. "/icons/mem.png"
+theme.widget_cpu                    = themes_dir .. "/icons/cpu.png"
+theme.widget_temp                   = themes_dir .. "/icons/temp.png"
+theme.widget_net                    = themes_dir .. "/icons/net.png"
+theme.widget_hdd                    = themes_dir .. "/icons/hdd.png"
+theme.widget_music                  = themes_dir .. "/icons/note.png"
+theme.widget_music_on               = themes_dir .. "/icons/note_on.png"
+theme.widget_vol                    = themes_dir .. "/icons/vol.png"
+theme.widget_vol_low                = themes_dir .. "/icons/vol_low.png"
+theme.widget_vol_no                 = themes_dir .. "/icons/vol_no.png"
+theme.widget_vol_mute               = themes_dir .. "/icons/vol_mute.png"
+theme.widget_mail                   = themes_dir .. "/icons/mail.png"
+theme.widget_mail_on                = themes_dir .. "/icons/mail_on.png"
+
 
 -- {{{ Titlebar icons
 theme.titlebar_close_button_focus  = theme.confdir .. "/icons/titlebar/close_focus.png"
@@ -150,6 +155,17 @@ theme.titlebar_maximized_button_focus_inactive  = theme.confdir .. "/icons/title
 theme.titlebar_maximized_button_normal_inactive = theme.confdir .. "/icons/titlebar/maximized_normal_inactive.png"
 -- }}}
 -- }}}
+
+
+theme.submenu_icon                  = themes_dir .. "/icons/submenu.png"
+theme.taglist_squares_sel           = themes_dir .. "/icons/square_sel.png"
+theme.taglist_squares_unsel         = themes_dir .. "/icons/square_unsel.png"
+
+
+theme.arrl                          = themes_dir .. "/icons/arrl.png"
+theme.arrl_dl                       = themes_dir .. "/icons/arrl_dl.png"
+theme.arrl_ld                       = themes_dir .. "/icons/arrl_ld.png"
+
 
 
 return theme

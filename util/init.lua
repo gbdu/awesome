@@ -2,6 +2,7 @@ local beautiful = require("beautiful")
 local awful = require("awful")
 local wibox = require("wibox")
 local naughty = require("naughty")
+
 local capi = {
     client = client,
     tag = tag,
@@ -12,12 +13,15 @@ local capi = {
     timer = timer
 }
 
+
 -- some of the routines are inspired by Shifty (https://github.com/bioe007/awesome-shifty.git)
 local util = {}
 
 -----
 util.taglist = {}
 util.taglist.taglist = {}
+
+util.tag_stats = {}
 
 function util.taglist.set_taglist(taglist)
     util.taglist.taglist = taglist
@@ -42,6 +46,34 @@ end
 
 -----
 util.tag = {}
+local mytbl = { 'a','b','c','e'}
+
+function shallowcopy(orig)
+    local orig_type = type(orig)
+    local copy
+    if orig_type == 'table' then
+        copy = {}
+        for orig_key, orig_value in pairs(orig) do
+            copy[orig_key] = orig_value
+        end
+    else -- number, string, boolean, etc
+        copy = orig
+    end
+    return copy
+end
+
+function util.let()
+  ---  for _,b in ipairs(awful.tag.gettags(1)) do  
+      ---  if util.tag[b.name] then
+         ---   util.tag[b.name] = util.tag[b.name]+1
+      --- end
+        ---else
+        ---    util.tag[b.name] = 1
+        ---end
+  --- end 
+
+             
+end
 
 function util.tag.rel_move(tag, rel_idx)
     if tag then 
@@ -53,6 +85,8 @@ function util.tag.rel_move(tag, rel_idx)
         awful.tag.viewonly(tag)
     end
 end
+
+
 
 --name2tags: matches string 'name' to tag objects
 --@param name: tag name to find
@@ -144,12 +178,13 @@ function util.tag.rename(tag, newp)
 
     awful.prompt.run(
     {
-        fg_cursor = fg,
+        fg_sor = fg,
         bg_cursor = bg,
         ul_cursor = "single",
         text = text,
         selectall = true
     },
+
     -- taglist internals -- found with the debug code above
     util.taglist.taglist[scr].widgets[awful.tag.getidx(t)].widget.widgets[2].widget,
     function (name)
