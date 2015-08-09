@@ -41,7 +41,12 @@ customization.default = {}
 customization.option = {}
 customization.timer = {}
 
+<<<<<<< HEAD
 customization.config.version = "1.5.10"
+=======
+customization.config.version = "1.5.12"
+customization.config.help_url = "https://github.com/pw4ever/awesome-wm-config/tree/" .. customization.config.version
+>>>>>>> 7a8f13072fcf45409c8f6237142ba83071d4ec3c
 
 customization.default.property = {
     layout = awful.layout.suit.float,
@@ -936,6 +941,53 @@ end),
 
 awful.key({ modkey, }, "`", function ()
     awful.util.spawn("xscreensaver-command -l")
+end),
+
+<<<<<<< HEAD
+=======
+awful.key({ modkey, }, "Home", function ()
+    awful.util.spawn("xscreensaver-command -l")
+end),
+
+awful.key({ modkey, }, "End", function ()
+    awful.util.spawn("systemctl suspend")
+end),
+
+awful.key({ modkey, }, "Insert", function ()
+  local scr = mouse.screen
+  awful.prompt.run({prompt = "Reboot (type 'yes' to confirm)? "},
+  mypromptbox[scr].widget,
+  function (t)
+    if string.lower(t) == 'yes' then
+      awful.util.spawn("systemctl reboot")
+    end
+  end,
+  function (t, p, n)
+    return awful.completion.generic(t, p, n, {'no', 'NO', 'yes', 'YES'})
+  end)
+end),
+
+awful.key({ modkey, }, "Delete", function ()
+  local scr = mouse.screen
+  awful.prompt.run({prompt = "Power Off (type 'yes' to confirm)? "},
+  mypromptbox[scr].widget,
+  function (t)
+    if string.lower(t) == 'yes' then
+      awful.util.spawn("systemctl poweroff")
+    end
+  end,
+  function (t, p, n)
+    return awful.completion.generic(t, p, n, {'no', 'NO', 'yes', 'YES'})
+  end)
+end),
+
+awful.key({ modkey }, "'", function ()
+    awful.util.spawn("xfce4-appfinder")
+end),
+>>>>>>> 7a8f13072fcf45409c8f6237142ba83071d4ec3c
+
+awful.key({ modkey }, "F3", function ()
+    awful.util.spawn("xfce4-appfinder")
 end),
 
 
