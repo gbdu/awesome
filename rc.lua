@@ -41,12 +41,7 @@ customization.default = {}
 customization.option = {}
 customization.timer = {}
 
-<<<<<<< HEAD
-customization.config.version = "1.5.10"
-=======
-customization.config.version = "1.5.12"
-customization.config.help_url = "https://github.com/pw4ever/awesome-wm-config/tree/" .. customization.config.version
->>>>>>> 7a8f13072fcf45409c8f6237142ba83071d4ec3c
+customization.config.version = "1"
 
 customization.default.property = {
     layout = awful.layout.suit.float,
