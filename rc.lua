@@ -938,8 +938,6 @@ awful.key({ modkey, }, "`", function ()
     awful.util.spawn("xscreensaver-command -l")
 end),
 
-<<<<<<< HEAD
-=======
 awful.key({ modkey, }, "Home", function ()
     awful.util.spawn("xscreensaver-command -l")
 end),
@@ -979,7 +977,6 @@ end),
 awful.key({ modkey }, "'", function ()
     awful.util.spawn("xfce4-appfinder")
 end),
->>>>>>> 7a8f13072fcf45409c8f6237142ba83071d4ec3c
 
 awful.key({ modkey }, "F3", function ()
     awful.util.spawn("xfce4-appfinder")
